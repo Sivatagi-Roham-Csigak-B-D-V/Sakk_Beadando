@@ -1,4 +1,72 @@
+main{
+    width: 80%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-areas: "h h h h h"
+                         "n n n n n"
+                         "sz1 sz1 sz1 as as"
+                         "b1 a b2 as as"
+                         "sz2 sz2 sz2 as as"
+                         "f f f f f";
+    margin: auto;
+}
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-area: a;
+}
+footer{
+    grid-area: f;
+}
+aside{
+    grid-area: as;
+    padding-left: 30px;
+}
 section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border: 3px solid black;
+    grid-area: s;
+}
+#betu1{
+    grid-area: b1;
+
+}
+#betu2{
+    grid-area: b2;
+
+}
+.szam1{
+    display: grid;
+    grid-area: sz1;
+
+    grid-template-columns: repeat(10, 1fr);
+}
+.szam2{
+    display: grid;
+    grid-area: sz2;
+    grid-template-columns: repeat(10, 1fr);
+}
+.cella{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.jelolo{
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.jelolo1{
+    padding-left: 15px;
+    width: 30px;
+    height: 50px;
+    text-align: center;
 }
