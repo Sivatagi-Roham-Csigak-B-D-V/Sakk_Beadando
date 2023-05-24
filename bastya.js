@@ -1,7 +1,7 @@
 class Bastya{
-    Lepesek()
-    Lepes_Lehetoseg()
+    constructor(){
 
+    }
     Lepesek(){
 
     }
@@ -9,3 +9,4 @@ class Bastya{
         
     }
 }
+export default Bastya

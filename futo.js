@@ -1,7 +1,7 @@
 class Futo{
-    Lepesek()
-    Lepes_Lehetoseg()
+    constructor(){
 
+    }
     Lepesek(){
 
     }
@@ -9,3 +9,4 @@ class Futo{
         
     }
 }
+export default Futo

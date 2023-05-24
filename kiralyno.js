@@ -1,7 +1,5 @@
-class Paraszt{
-    constructor(){
+class Kiralyno{
 
-    }
     Lepesek(){
 
     }
@@ -9,4 +7,4 @@ class Paraszt{
         
     }
 }
-export default Paraszt
+export default Kiralyno
