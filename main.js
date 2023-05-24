@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Palya from "./palya.js";
 import Babu from "./babu.js";
 
@@ -14,3 +15,10 @@ $(function() {
       }
     }
   });
+=======
+import Jatekter from "./jatekter.js";
+
+$(function (){
+  new Jatekter()
+})
+>>>>>>> 1207a19027a457110831d1b7a65eff6d4e3f02ea

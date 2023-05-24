@@ -1,8 +1,11 @@
 class Palya {
-    constructor(index, szuloElem) {
+    constructor(index, szuloElem, id) {
       this.index = index;
+      this.id = id;
       this.divElem = $("<div class='cella'><p>Sakk</p></div>");
+      this.divElem.attr("id", this.id);
       szuloElem.append(this.divElem);
+      
       this.applyBackground();
     }
   
