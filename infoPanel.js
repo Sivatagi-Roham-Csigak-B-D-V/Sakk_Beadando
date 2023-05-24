@@ -1,26 +1,35 @@
 class Infopanel {
+  constructor() {
+      this.lepesElement = document.createElement('p');
+      this.lepesElement.classList.add('lepes');
 
-    #gyozelem
-    init(){
-        const asideElem = document.createElement('aside')
-        asideElem.append(`<p class="lepes"></p>`);
-        asideElem.append(`<p class="jatekos"></p>`);
-        asideElem.append(`<p class="gyozelem"></p>`);
-    
-        this.lepes = $(".lepes");
-        this.jatekos = $(".jatekos");
-        this.#gyozelem = $(".gyozelem");
-      }
-    
-      setLepes(lepes) {
-        this.lepes.html(lepes).append(". lépés");
-      }
-      setJatekos(jatekos) {
-        this.jatekos.html(jatekos);
-      }
-      setVege(gyozelem) {
-        this.gyozelem.html(gyozelem);
-      }
-    }
- 
-  export default Infopanel;
+      this.jatekosElement = document.createElement('p');
+      this.jatekosElement.classList.add('jatekos');
+
+      this.gyozelemElement = document.createElement('p');
+      this.gyozelemElement.classList.add('gyozelem');
+  }
+
+  setLepes(lepes) {
+      this.lepesElement.textContent = `${lepes}. lépés`;
+  }
+
+  setJatekos(jatekos) {
+      this.jatekosElement.textContent = jatekos;
+  }
+
+  setgyozelem(gyozelem) {
+      this.gyozelemElement.textContent = gyozelem;
+  }
+
+  megjelenit(parentElement) {
+      const asideElem = document.createElement('aside');
+      asideElem.appendChild(this.lepesElement);
+      asideElem.appendChild(this.jatekosElement);
+      asideElem.appendChild(this.gyozelemElement);
+
+      parentElement.appendChild(asideElem);
+  }
+}
+
+export default Infopanel;
