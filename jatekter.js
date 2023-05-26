@@ -39,22 +39,22 @@ class Jatekter {
                 cella.append(babu.getNev())
               }else if(index == 57 || index == 64){
                 const babu=new Babu("feher_Bastya")
-                cella.append(babu.getNev())
+                cella.append(babu.getNev()).css("color", "white")
               }else if(index == 58 || index == 63){
                 const babu=new Babu("feher_Ló")
-                cella.append(babu.getNev())
+                cella.append(babu.getNev()).css("color", "white")
               }else if(index == 59 || index == 62){
                 const babu=new Babu("feher_Futo")
-                cella.append(babu.getNev())
+                cella.append(babu.getNev()).css("color", "white")
               }else if(index == 60){
                 const babu=new Babu("feher_királynő")
-                cella.append(babu.getNev())
+                cella.append(babu.getNev()).css("color", "white")
               }else if(index == 61){
                 const babu=new Babu("feher_király")
-                cella.append(babu.getNev())
+                cella.append(babu.getNev()).css("color", "white")
               }else if(index > 48 && index < 57){
                 const babu=new Babu("feher_Paraszt")
-                cella.append(babu.getNev())
+                cella.append(babu.getNev()).css("color", "white")
               }
               if (szamlalo === 16) {
                 szamlalo = 0;

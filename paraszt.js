@@ -7,7 +7,7 @@ class Paraszt{
   
     kod() {
       if (this.szin === "feher") {
-        return "&#9817;";
+        return "\u2659";
       } else {
         return "&#9823;";
       }
