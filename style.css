@@ -26,9 +26,16 @@ footer{
     grid-area: f;
 }
 aside{
+    
+    border:5px solid black;
     grid-area: as;
     padding-left: 30px;
+    padding-right: 30px;
+   
+    height: fit-content;
+    
 }
+
 section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -60,6 +67,8 @@ section{
     width: 80px;
     height: 80px;
     text-align: center;
+    font-size: 50px;
+    
 }
 .jelolo{
     padding-top: 10px;

@@ -1,8 +1,8 @@
-class Paraszt {
-    constructor(szin, id) {
-      this.szin = szin;
-      this.id = id;
-      this.elsolepes = true;
+class Paraszt{
+    #elso;
+    constructor(szin){
+        this.szin=szin
+        this.#elso="elso"
     }
   
     kod() {
@@ -12,9 +12,10 @@ class Paraszt {
         return "&#9823;";
       }
     }
-   
-    getpoz(){
-        return this.id;
+    Lepesek(){
+        if (elso="elso"){
+
+        }
     }
   
     Lepesek() {
