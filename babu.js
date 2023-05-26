@@ -8,9 +8,8 @@ import Kiralyno from "./Kiralyno.js";
 import Lo from "./lo.js";
 
 class Babu{
-    constructor(){
-    this.id_hely=setId_hely
-    this.Nev=this.Nev
+    constructor(nev){
+    this.setNev(nev)
     }
     setId_hely(){
         this.setId_hely
@@ -19,49 +18,61 @@ class Babu{
         return this.getId_hely
     }
     getNev(){
-        return this.getNev
+        return this.nev
+        
     }
-    osszealit(lista,kulcslista)
+    setNev(nev){
+        switch(nev){
+            case "fekete_Paraszt":
+                new Paraszt("")
+                Paraszt.kod()
+                break;
+            case "fekete_Bastya":
+                new Bastya("")
+                ParasBastyazt.kod()
+                break;
+            case "fekete_Futo":
+                new Futo("");
+                Futo.kod()
+                break;
+            case "fekete_Ló":
+                new Lo("")
+                Lo.kod()
+                break;
+            case "fekete_királynő":
+                const kiralyno=new Kiralyno("")
+                Kiralyno.kod()
+                break;
+            case "fekete_király":
+                const kiraly=new Kiraly("")
+                this.nev=Kiraly.kod()
+                break;
+            case "feher_Paraszt":
+                const paraszt=new Paraszt("feher")
+                this.nev=paraszt.kod()
+                break;
+            case "feher_Bastya":
+                new Bastya("feher")
+                Bastya.kod()
+                break;
+            case "feher_Futo":
+                new Futo("feher");
+                Futo.kod()
+                break;
+            case "feher_Ló":
+                new Lo("feher")
+                Lo.kod()
+                break;
+            case "feher_királynő":
+                new Kiralyno("feher")
+                Kiralyno.kod()
+                break;
+            case "feher_király":
+                new Kiraly("feher")
+                Kiraly.kod()
+                break;
+        }
+    }
 
-
- letrehoz(Nev){
-    switch(Nev){
-        case "fekete_Paraszt":
-            new Paraszt("")
-            break;
-        case "fekete_Bastya":
-            new Bastya("")
-            break;
-        case "fekete_Futo":
-            new Futo("");
-            break;
-        case "fekete_Ló":
-            new Lo("")
-            break;
-        case "fekete_királynő":
-            new Kiralyno("")
-            break;
-        case "fekete_király":
-            new Kiraly("")
-            break;
-        case "feher_Paraszt":
-            new Paraszt("feher")
-            break;
-        case "feher_Bastya":
-            new Bastya("feher")
-            break;
-        case "feher_Futo":
-            new Futo("feher");
-            break;
-        case "feher_Ló":
-            new Lo("feher")
-            break;
-        case "feher_királynő":
-            new Kiralyno("feher")
-            break;
-        case "feher_király":
-            new Kiraly("feher")
-            break;
-    }
-    }
 }
+export default Babu
