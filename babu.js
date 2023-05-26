@@ -33,7 +33,7 @@ class Babu{
                 break;
             case "fekete_Futo":
                 const futo=new Futo("");
-                tFuto.kod()
+                Futo.kod()
                 break;
             case "fekete_Ló":
                 const lo=new Lo("")
