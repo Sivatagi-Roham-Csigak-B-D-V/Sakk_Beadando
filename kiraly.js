@@ -4,10 +4,10 @@ class Kiraly{
     }
     kod(){
         if (this.szin=="feher"){
-         return "&#9813;"
+         return "&#9812;"
         }
         else{
-        return "&#9819;"
+        return "&#9818;"
         }
      }
     Lepesek(){

@@ -25,31 +25,31 @@ class Babu{
         switch(nev){
             case "fekete_Paraszt":
                 const parasztb=new Paraszt("")
-                this.nev=Paraszt.kod()
+                this.nev=parasztb.kod()
                 break;
             case "fekete_Bastya":
                 const bastyab=new Bastya("")
-                this.nev=bastya.kod()
+                this.nev=bastyab.kod()
                 break;
             case "fekete_Futo":
                 const futob=new Futo("");
-                this.nev=Futo.kod()
+                this.nev=futob.kod()
                 break;
             case "fekete_Ló":
                 const lob=new Lo("")
-                this.nev=Lo.kod()
+                this.nev=lob.kod()
                 break;
             case "fekete_királynő":
                 const kiralynob=new Kiralyno("")
-                this.nev=Kiralyno.kod()
+                this.nev=kiralynob.kod()
                 break;
             case "fekete_király":
                 const kiralyb=new Kiraly("")
-                this.nev=Kiraly.kod()
+                this.nev=kiralyb.kod()
                 break;
             case "feher_Paraszt":
                 const parasztf=new Paraszt("feher")
-                this.nev=paraszt.kod()
+                this.nev=parasztf.kod()
                 break;
             case "feher_Bastya":
                 const bastyaf=new Bastya("feher")
