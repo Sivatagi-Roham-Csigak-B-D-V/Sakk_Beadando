@@ -1,4 +1,4 @@
-class Futo{
+class Lo{
     constructor(szin){
         this.szin=szin
     }

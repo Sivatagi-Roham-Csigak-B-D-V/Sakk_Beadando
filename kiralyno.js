@@ -11,7 +11,7 @@ class Kiralyno{
         }
     }
     Lepesek(){
-
+        
     }
     Lepes_Lehetoseg(){
         
