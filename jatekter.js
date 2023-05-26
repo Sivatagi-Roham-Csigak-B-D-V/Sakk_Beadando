@@ -1,5 +1,6 @@
 import Palya from "./palya.js";
 import InfoPanel from "./infoPanel.js";
+import { letrehoz } from "./babu.js";
 class Jatekter {
     #lepes;
     constructor(){
@@ -19,6 +20,7 @@ class Jatekter {
                 szamlalo = 0;
               }
             }
+            
           });
           $(window).on("elemKivalasztas", (event) => {
             if (this.#lepes % 2 === 0) {
@@ -34,7 +36,8 @@ class Jatekter {
             }else{
                 jatekfolyamat.text("A játék vége!")
             }
-          });  
+          });
+          letrehoz("fekete_Paraszt")  
     }
     
 }

@@ -24,7 +24,7 @@ class Babu{
     osszealit(lista,kulcslista)
 }
 
-function letrehoz(Nev){
+export function letrehoz(Nev){
     switch(Nev){
         case "fekete_Paraszt":
             new Paraszt("")
@@ -64,3 +64,5 @@ function letrehoz(Nev){
             break;
     }
 }
+
+export default Babu
