@@ -3,8 +3,10 @@ import InfoPanel from "./infoPanel.js";
 import { letrehoz } from "./babu.js";
 class Jatekter {
     #lepes;
+  
     constructor(){
       this.#lepes = 0;
+     
         $(function() {
             const szuloElem = $("section");
             let szamlalo = 0;
@@ -31,7 +33,7 @@ class Jatekter {
             }
             this.#lepes++;
             infoPanel.updateLepes(this.#lepes);
-            if (this.#lepes < 9){
+            if (this.#lepes < 1000){
                 jatekfolyamat.text(`A játék folyamatbanss`)
             }else{
                 jatekfolyamat.text("A játék vége!")
