@@ -1,5 +1,15 @@
 class Kiraly{
-
+    constructor(szin){
+        this.szin=szin
+    }
+    kod(){
+        if (this.szin=="feher"){
+         return "&#9813;"
+        }
+        else{
+        return "&#9819;"
+        }
+     }
     Lepesek(){
 
     }
