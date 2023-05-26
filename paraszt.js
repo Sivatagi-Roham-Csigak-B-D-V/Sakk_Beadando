@@ -1,7 +1,10 @@
 class Paraszt{
+    #elso;
     constructor(szin){
         this.szin=szin
+        this.#elso="elso"
     }
+    
     kod(){
        if (this.szin=="feher"){
         return "&#9817;"
@@ -11,7 +14,9 @@ class Paraszt{
        }
     }
     Lepesek(){
+        if (elso="elso"){
 
+        }
     }
     Lepes_Lehetoseg(){
         
