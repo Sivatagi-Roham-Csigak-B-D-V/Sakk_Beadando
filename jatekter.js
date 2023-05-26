@@ -37,7 +37,6 @@ class Jatekter {
                 jatekfolyamat.text("A játék vége!")
             }
           });
-          letrehoz("fekete_Paraszt")  
     }
     
 }

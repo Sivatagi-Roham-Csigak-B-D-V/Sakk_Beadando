@@ -22,9 +22,9 @@ class Babu{
         return this.getNev
     }
     osszealit(lista,kulcslista)
+}
 
-
- letrehoz(Nev){
+function letrehoz(Nev){
     switch(Nev){
         case "fekete_Paraszt":
             new Paraszt("")
@@ -62,6 +62,5 @@ class Babu{
         case "feher_király":
             new Kiraly("feher")
             break;
-    }
     }
 }
