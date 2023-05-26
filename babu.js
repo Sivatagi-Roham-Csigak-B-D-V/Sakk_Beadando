@@ -32,16 +32,16 @@ class Babu{
                 ParasBastyazt.kod()
                 break;
             case "fekete_Futo":
-                new Futo("");
-                Futo.kod()
+                const futo=new Futo("");
+                tFuto.kod()
                 break;
             case "fekete_Ló":
-                new Lo("")
-                Lo.kod()
+                const lo=new Lo("")
+                this.nev=Lo.kod()
                 break;
             case "fekete_királynő":
                 const kiralyno=new Kiralyno("")
-                Kiralyno.kod()
+                this.nev=Kiralyno.kod()
                 break;
             case "fekete_király":
                 const kiraly=new Kiraly("")
