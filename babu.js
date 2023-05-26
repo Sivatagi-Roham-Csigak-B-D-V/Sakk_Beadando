@@ -1,6 +1,5 @@
-import { Feketebábuk } from "./Babuklista.js"
+import { lista } from "./Babuklista.js"
 import { kulcslista } from "./Babuklista.js"
-import { Fehérbábuk } from "./Babuklista.js"
 import Bastya from "./bastya.js";
 import Futo from "./futo.js";
 import Paraszt from "./paraszt.js";
@@ -22,29 +21,46 @@ class Babu{
     getNev(){
         return this.getNev
     }
-    
+    osszealit(lista,kulcslista)
 }
 
 function letrehoz(Nev){
     switch(Nev){
-        case "Paraszt":
-            new Paraszt(id_hely)
+        case "fekete_Paraszt":
+            new Paraszt()
             break;
-        case "Bastya":
-            new Bastya(id_hely)
+        case "fekete_Bastya":
+            new Bastya()
             break;
-        case "Futo":
-            new Futo(id_hely);
+        case "fekete_Futo":
+            new Futo();
             break;
-        case "Ló":
-            new Lo(id_hely)
+        case "fekete_Ló":
+            new Lo()
             break;
-        case "királynő":
-            new Kiralyno(id_hely)
+        case "fekete_királynő":
+            new Kiralyno()
             break;
-        case "királynő":
-            new Kiraly(id_hely)
+        case "fekete_király":
+            new Kiraly()
+            break;
+        case "feher_Paraszt":
+            new Paraszt("feher")
+            break;
+        case "feher_Bastya":
+            new Bastya("feher")
+            break;
+        case "feher_Futo":
+            new Futo("feher");
+            break;
+        case "feher_Ló":
+            new Lo("feher")
+            break;
+        case "feher_királynő":
+            new Kiralyno("feher")
+            break;
+        case "feher_király":
+            new Kiraly("feher")
             break;
     }
-
 }
