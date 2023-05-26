@@ -40,5 +40,4 @@ class Jatekter {
     
 }
 
-
-export default Jatekter
+export default Jatekter;
