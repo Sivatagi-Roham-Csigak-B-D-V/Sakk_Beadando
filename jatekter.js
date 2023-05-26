@@ -1,5 +1,6 @@
 import Palya from "./palya.js";
 import InfoPanel from "./infoPanel.js";
+import Babu from "./babu.js";
 class Jatekter {
     #lepes;
     constructor(){
@@ -19,6 +20,10 @@ class Jatekter {
                 szamlalo = 0;
               }
             }
+            const babu=new Babu("feher_Paraszt")
+            const teszt=$("#1")
+            console.log(teszt)
+            teszt.append(babu.getNev())
           });
           $(window).on("elemKivalasztas", (event) => {
             if (this.#lepes % 2 === 0) {
@@ -34,7 +39,8 @@ class Jatekter {
             }else{
                 jatekfolyamat.text("A játék vége!")
             }
-          });  
+          });
+          
     }
     
 }

@@ -4,7 +4,6 @@ class Paraszt{
         this.szin=szin
         this.#elso="elso"
     }
-    
     kod(){
        if (this.szin=="feher"){
         return "&#9817;"
