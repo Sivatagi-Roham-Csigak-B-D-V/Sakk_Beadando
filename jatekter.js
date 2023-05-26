@@ -1,4 +1,5 @@
 import Palya from "./palya.js";
+import InfoPanel from "./infoPanel.js";
 class Jatekter {
   #lepes;
 
