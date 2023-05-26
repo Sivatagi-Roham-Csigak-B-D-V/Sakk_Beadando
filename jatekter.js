@@ -23,9 +23,11 @@ class Jatekter {
               }
             }
             const babu=new Babu("feher_Paraszt")
-            const teszt=$("#1")
-            console.log(teszt)
+            const teszt=$("#9")
             teszt.append(babu.getNev())
+            const b2 =new Babu("fekete_Paraszt")
+            const teszt2=$("#56")
+            teszt2.append(b2.getNev())
           });
           $(window).on("elemKivalasztas", (event) => {
             if (this.#lepes % 2 === 0) {

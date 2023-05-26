@@ -24,8 +24,8 @@ class Babu{
     setNev(nev){
         switch(nev){
             case "fekete_Paraszt":
-                new Paraszt("")
-                Paraszt.kod()
+                const parasztf=new Paraszt("")
+                this.nev=parasztf.kod()
                 break;
             case "fekete_Bastya":
                 new Bastya("")
