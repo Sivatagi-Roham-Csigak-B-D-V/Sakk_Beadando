@@ -10,8 +10,8 @@ class Bastya{
         return "&#9820;"
         }
      }
-    Lepesek(){
-
+    Lepesek(index){
+        
     }
     Lepes_Lehetoseg(){
         
