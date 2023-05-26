@@ -22,16 +22,15 @@ class Jatekter {
           });
           $(window).on("elemKivalasztas", (event) => {
             if (this.#lepes % 2 === 0) {
-              event.detail.setElem("X");
-              playerPTag.text("Játékos: O");
+           
+              playerPTag.text("jelenlegi Játékos: feher");
             } else {
-              event.detail.setElem("O");
-              playerPTag.text("Játékos: X");
+              playerPTag.text("jelenlegi Játékos: fekete");
             }
             this.#lepes++;
             infoPanel.updateLepes(this.#lepes);
             if (this.#lepes < 9){
-                jatekfolyamat.text("A játék folyamatban")
+                jatekfolyamat.text(`A játék folyamatbanss`)
             }else{
                 jatekfolyamat.text("A játék vége!")
             }
