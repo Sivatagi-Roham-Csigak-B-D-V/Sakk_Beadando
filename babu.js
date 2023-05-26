@@ -26,7 +26,6 @@ class Babu{
             case "fekete_Paraszt":
                 const parasztb=new Paraszt("")
                 this.nev=parasztb.kod()
-
                 break;
             case "fekete_Bastya":
                 const bastyab=new Bastya("")
@@ -50,7 +49,7 @@ class Babu{
                 break;
             case "feher_Paraszt":
                 const parasztf=new Paraszt("feher")
-                this.nev.css=parasztf.kod()
+                this.nev=parasztf.kod()
                 break;
             case "feher_Bastya":
                 const bastyaf=new Bastya("feher")
