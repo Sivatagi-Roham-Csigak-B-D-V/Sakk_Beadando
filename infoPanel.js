@@ -2,8 +2,9 @@ class InfoPanel {
     #lepesElem;
   
     constructor(szuloElem) {
-      const p1 = $("<p>").text("Játékos: X");
-      const p2 = $("<p>").text(`Lépésszám: `);
+
+      const p1 = $("<p>").text("Játékos: fehér");
+      const p2 = $("<p>").text(`Lépésszám: 0`);
       const p3 = $("<p>").text("Játék még nincs elkezdve");
   
       this.#lepesElem = p2;
