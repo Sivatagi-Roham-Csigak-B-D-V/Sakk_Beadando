@@ -27,22 +27,22 @@ class Babu{
 function letrehoz(Nev){
     switch(Nev){
         case "fekete_Paraszt":
-            new Paraszt()
+            new Paraszt("")
             break;
         case "fekete_Bastya":
-            new Bastya()
+            new Bastya("")
             break;
         case "fekete_Futo":
-            new Futo();
+            new Futo("");
             break;
         case "fekete_Ló":
-            new Lo()
+            new Lo("")
             break;
         case "fekete_királynő":
-            new Kiralyno()
+            new Kiralyno("")
             break;
         case "fekete_király":
-            new Kiraly()
+            new Kiraly("")
             break;
         case "feher_Paraszt":
             new Paraszt("feher")
