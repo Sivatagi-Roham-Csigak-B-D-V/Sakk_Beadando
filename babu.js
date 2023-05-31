@@ -11,12 +11,6 @@ class Babu{
     constructor(nev){
     this.setNev(nev)
     }
-    setId_hely(){
-        this.setId_hely
-    }
-    getId_hely(){
-        return this.getId_hely
-    }
     getNev(){
         return this.nev
         
