@@ -9,7 +9,7 @@ class Futo{
         else{
         return "&#9821;"
         }
-     }
+    }
     Lepesekjf(index){
         let szamok=[]
         let szamlalo=hatarr(index/8)
@@ -66,6 +66,57 @@ class Futo{
         }
         return szamok
     }
-
+    hatarr(index){
+        if (index>7){
+            return 8
+        }
+        if (index>6){
+            return 7
+        }
+        if (index>5){
+            return 6
+        }
+        if (index>4){
+            return 5
+        }
+        if (index>3){
+            return 4
+        }
+        if (index>2){
+            return 3
+        }
+        if (index>1){
+            return 2
+        }
+        if (index>0){
+            return 1
+        }
+    }
+    hatarf(index){
+        if (index==7){
+            return 7
+        }
+        if (index==6){
+            return 5
+        }
+        if (index==5){
+            return 4
+        }
+        if (index==4){
+            return 3
+        }
+        if (index==3){
+            return 2
+        }
+        if (index==2){
+            return 1
+        }
+        if (index==1){
+            return 0
+        }
+        if (index==0){
+            return 8
+        }
+    }
 }
 export default Futo
