@@ -46,12 +46,7 @@ class Bastya{
         }
         return szamok
     }
-        
-    Lepes_Lehetoseg(index){
-        let sor=index/8
-        let viszintes=index/8==sor && index>sor*8
-        return viszintes
-    }
+    
     Lepes_Lehetoseg(index,szamlalo){
         let sor=index/8
         sor=szam(sor)
