@@ -49,13 +49,13 @@ class Bastya{
     
     Lepes_Lehetoseg(index,szamlalo){
         let sor=index/8
-        sor=szam(sor)
+        sor=hatar(sor)
         szamlalo=szamlalo/8
         let viszintes=sor<=szamlalo
         let viszintes2=sor+1>=szamlalo
         return viszintes&& viszintes2
     }
-    szam(index){
+    hatar(index){
         if (index>7){
             return 7
         }
