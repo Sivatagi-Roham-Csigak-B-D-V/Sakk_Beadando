@@ -9,9 +9,15 @@ main{
                          "sz2 sz2 sz2 as as"
                          "f f f f f";
     margin: auto;
+    background-color: rgb(221, 210, 179);
+    padding:25px;
+    border: solid black 5px;
 }
 header{
     grid-area: h;
+}
+body{
+    background-color: rgb(207, 194, 158);
 }
 nav{
     grid-area: n;
@@ -33,6 +39,7 @@ aside{
     padding-right: 30px;
    
     height: fit-content;
+    width: fit-content;
     
 }
 
@@ -79,6 +86,10 @@ section{
     width: 80px;
     height: 80px;
     float: right;
+}
+h1,h3,footer{
+    text-align: center;
+
 }
 
 
