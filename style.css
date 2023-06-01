@@ -124,3 +124,15 @@ section{
     background-color: #ddd;
   }
   
+  @media (max-width: 800px) {
+   main{
+    grid-template-areas: "h h h "
+                         "n n n "
+                         "sz1 sz1 sz1 "
+                         "b1 a b2 "
+                         "sz2 sz2 sz2  "
+                         "as as as"
+                         "f f f ";
+   }
+    
+    }
