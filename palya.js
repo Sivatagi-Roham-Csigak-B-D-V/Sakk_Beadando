@@ -14,11 +14,11 @@ class Palya {
         if (this.index % 2 === 0) {
           this.divElem.css("background-color", "#A20D0D");
         } else {
-          this.divElem.css("background-color", "#BAB4B4");
+          this.divElem.css("background-color", "#696969");
         }
       } else {
         if (this.index % 2 === 0) {
-          this.divElem.css("background-color", "#BAB4B4");
+          this.divElem.css("background-color", "#696969");
         } else {
           this.divElem.css("background-color", "#A20D0D");
         }

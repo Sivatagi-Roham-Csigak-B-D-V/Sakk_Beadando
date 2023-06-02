@@ -1,6 +1,6 @@
 main{
     width: 80%;
-    max-width: 1200px;
+    max-width: fit-content;
     display: grid;
     grid-template-areas: "h h h h h"
                          "n n n n n"
@@ -35,8 +35,8 @@ aside{
     
     border:5px solid black;
     grid-area: as;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
    
     height: fit-content;
     width: fit-content;
@@ -135,8 +135,10 @@ h1,h3,footer{
     background-color: #ddd;
   }
   
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
    main{
+    border: none;
+    width: 100%;
     grid-template-areas: "h h h "
                          "n n n "
                          "sz1 sz1 sz1 "
@@ -145,5 +147,10 @@ h1,h3,footer{
                          "as as as"
                          "f f f ";
    }
-    
+   body{
+    border: solid black 5px;
+    background-color: rgb(221, 210, 179);
+   }
+   
+  
     }
