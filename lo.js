@@ -1,5 +1,5 @@
 class Lo{
-    constructor(szin){
+    constructor(){
     }
 
     lepes(){

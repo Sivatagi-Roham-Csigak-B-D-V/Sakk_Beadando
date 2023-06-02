@@ -1,5 +1,5 @@
 class Kiralyno{
-    constructor(szin){
+    constructor(){
     }
 
     lepes_tomb(index){
