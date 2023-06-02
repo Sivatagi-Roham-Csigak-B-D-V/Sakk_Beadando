@@ -1,12 +1,21 @@
 class Palya {
+    #allapot
     constructor(index, szuloElem, id) {
       this.index = index;
       this.id = id;
       this.divElem = $("<div class='cella'></div>");
       this.divElem.attr("id", this.id);
+      this.#allapot=true
       szuloElem.append(this.divElem);
       
       this.applyBackground();
+      this.divElem.on("click",()=>{
+        if(this.#allapot){
+          this.esemenyTriggger();
+        }
+        this.#allapot=false
+      })
+
       
     }
   
@@ -25,5 +34,11 @@ class Palya {
         }
       }
     }
+    esemenyTriggger(){
+    const esemeny=new CustomEvent("elemKivalasztas",{detail:this});
+    window.dispatchEvent(esemeny)
+    console.log(esemeny)
+    }
   }
+  
 export default Palya
