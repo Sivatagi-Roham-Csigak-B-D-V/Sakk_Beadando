@@ -78,7 +78,9 @@ class Jatekter {
                 jatekfolyamat.text("A játék vége!")
             }
           });
+        
     }
 }
+
 
 export default Jatekter;
