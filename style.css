@@ -134,6 +134,9 @@ h1,h3,footer{
   .dropdown:hover .dropbtn {
     background-color: #ddd;
   }
+  .cella.selected {
+    background-color: yellow;
+  }
   
   @media (max-width: 1000px) {
    main{
