@@ -13,6 +13,14 @@ class Futo{
         return "&#9821;"
         }
     }
+    lepes_tomb(index){
+        let tomb=[]
+        tomb.push(this.Lepesekbf(index))
+        tomb.push(this.lepesekjf(index))
+        tomb.push(this.Lepesekjl(index))
+        tomb.push(this.Lepesekbl(index))
+        return tomb
+    }
     Lepesekjf(index){
         let szamok=[]
         let szamlalo=hatarr(index/8)

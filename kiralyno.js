@@ -13,6 +13,18 @@ class Kiralyno{
         return "&#9819;"
         }
     }
+    lepes_tomb(index){
+        let tomb=[]
+        tomb.push(this.Lepesekbf(index))
+        tomb.push(this.lepesekjf(index))
+        tomb.push(this.Lepesekjl(index))
+        tomb.push(this.Lepesekbl(index))
+        tomb.push(this.Lepesf(index))
+        tomb.push(this.lepesj(index))
+        tomb.push(this.Lepesb(index))
+        tomb.push(this.lepesl(index))
+        return tomb
+    }
     Lepesekf(index){
         let szamok=[]
         let szamlalo=index
