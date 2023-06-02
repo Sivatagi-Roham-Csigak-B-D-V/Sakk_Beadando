@@ -23,41 +23,41 @@ class Jatekter {
               szamlalo++;
               const cella = $(`#${index}`)
               if (index == 1 || index == 8){
-                const bastya=new Bastya("fekete")
-                cella.append(bastya.kod())
+                const bastya=new Bastya()
+                
               }else if(index == 2 || index == 7){
-                const lo=new Lo("fekete")
-                cella.append(lo.kod())
+                const lo=new Lo()
+                
               }else if(index == 3 || index == 6){
-                const futo=new Futo("fekete")
-                cella.append(futo.kod())
+                const futo=new Futo()
+                
               }else if(index == 4){
-                const kiralyno=new Kiralyno("fekete")
-                cella.append(kiralyno.kod())
+                const kiralyno=new Kiralyno()
+                
               }else if(index == 5){
-                const kiraly=new Kiraly("fekete")
-                cella.append(kiraly.kod())
+                const kiraly=new Kiraly()
+                
               }else if(index > 8 && index < 17){
-                const paraszt=new Paraszt("fekete")
-                cella.append(paraszt.kod())
+                const paraszt=new Paraszt()
+                
               }else if(index == 57 || index == 64){
-                const bastya=new Bastya("feher")
-                cella.append(bastya.kod()).css("color", "white")
+                const bastya=new Bastya()
+                
               }else if(index == 58 || index == 63){
-                const lo=new Lo("feher")
-                cella.append(lo.kod()).css("color", "white")
+                const lo=new Lo()
+                
               }else if(index == 59 || index == 62){
-                const futo=new Futo("feher")
-                cella.append(futo.kod()).css("color", "white")
+                const futo=new Futo()
+              
               }else if(index == 60){
-                const kiralyno=new Kiralyno("feher")
-                cella.append(kiralyno.kod()).css("color", "white")
+                const kiralyno=new Kiralyno()
+                
               }else if(index == 61){
-                const kiraly=new Kiraly("feher")
-                cella.append(kiraly.kod()).css("color", "white")
+                const kiraly=new Kiraly()
+                
               }else if(index > 48 && index < 57){
-                const paraszt=new Paraszt("feher")
-                cella.append(paraszt.kod()).css("color", "white")
+                const paraszt=new Paraszt()
+                
               }
               if (szamlalo === 16) {
                 szamlalo = 0;
