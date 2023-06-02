@@ -2,8 +2,11 @@ class Kiralyno{
     constructor(szin){
         this.szin=szin
     }
+    Getszin(){
+        return this.szin
+    }
     kod(){
-        if (this.szin=="feher"){
+        if (this.Getszin()=="feher"){
          return "&#9813;"
         }
         else{

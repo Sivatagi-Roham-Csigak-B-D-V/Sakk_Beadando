@@ -6,7 +6,7 @@ class Bastya {
         return this.szin
     }
     kod(){
-        if (Getszin()=="feher"){
+        if (this.Getszin()=="feher"){
         return "&#9814;"
         }
         else{

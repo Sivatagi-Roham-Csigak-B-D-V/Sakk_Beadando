@@ -23,41 +23,41 @@ class Jatekter {
               szamlalo++;
               const cella = $(`#${index}`)
               if (index == 1 || index == 8){
-                const babu=new Bastya("fekete")
-                cella.append(Bastya.kod())
+                const bastya=new Bastya("fekete")
+                cella.append(bastya.kod())
               }else if(index == 2 || index == 7){
-                const babu=new Lo("fekete")
-                cella.append(Lo.kod())
+                const lo=new Lo("fekete")
+                cella.append(lo.kod())
               }else if(index == 3 || index == 6){
-                const babu=new Futo("fekete")
-                cella.append(Futo.kod())
+                const futo=new Futo("fekete")
+                cella.append(futo.kod())
               }else if(index == 4){
-                const babu=new Kiralyno("fekete")
-                cella.append(Kiralyno.kod())
+                const kiralyno=new Kiralyno("fekete")
+                cella.append(kiralyno.kod())
               }else if(index == 5){
-                const babu=new Kiraly("fekete")
-                cella.append(Kiraly.kod())
+                const kiraly=new Kiraly("fekete")
+                cella.append(kiraly.kod())
               }else if(index > 8 && index < 17){
-                const babu=new Paraszt("fekete")
-                cella.append(Paraszt.kod())
+                const paraszt=new Paraszt("fekete")
+                cella.append(paraszt.kod())
               }else if(index == 57 || index == 64){
-                const babu=new Bastya("feher")
-                cella.append(Bastya.kod()).css("color", "white")
+                const bastya=new Bastya("feher")
+                cella.append(bastya.kod()).css("color", "white")
               }else if(index == 58 || index == 63){
-                const babu=new Lo("feher")
-                cella.append(Lo.kod()).css("color", "white")
+                const lo=new Lo("feher")
+                cella.append(lo.kod()).css("color", "white")
               }else if(index == 59 || index == 62){
-                const babu=new Futo("feher")
-                cella.append(Futo.kod()).css("color", "white")
+                const futo=new Futo("feher")
+                cella.append(futo.kod()).css("color", "white")
               }else if(index == 60){
-                const babu=new Kiralyno("feher")
-                cella.append(Kiralyno.kod()).css("color", "white")
+                const kiralyno=new Kiralyno("feher")
+                cella.append(kiralyno.kod()).css("color", "white")
               }else if(index == 61){
-                const babu=new Kiraly("feher")
-                cella.append(Kiraly.kod()).css("color", "white")
+                const kiraly=new Kiraly("feher")
+                cella.append(kiraly.kod()).css("color", "white")
               }else if(index > 48 && index < 57){
-                const babu=new Paraszt("feher")
-                cella.append(Paraszt.kod()).css("color", "white")
+                const paraszt=new Paraszt("feher")
+                cella.append(paraszt.kod()).css("color", "white")
               }
               if (szamlalo === 16) {
                 szamlalo = 0;

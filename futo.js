@@ -6,7 +6,7 @@ class Futo{
         return this.szin
     }
     kod(){
-        if (Getszin()=="feher"){
+        if (this.Getszin()=="feher"){
          return "&#9815;"
         }
         else{

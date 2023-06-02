@@ -2,8 +2,11 @@ class Lo{
     constructor(szin){
         this.szin=szin
     }
+    Getszin(){
+        return this.szin
+    }
     kod(){
-        if (this.szin=="feher"){
+        if (this.Getszin()=="feher"){
          return "&#9816;"
         }
         else{
