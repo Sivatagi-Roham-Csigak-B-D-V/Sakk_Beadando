@@ -83,7 +83,7 @@ section{
     width: 80px;
     height: 70px;
     text-align: center;
-
+    margin: 10px;
 }
 .jelolo1{
     width: 80px;
@@ -142,7 +142,7 @@ p{
     background-color: #ddd;
   }
   
-  @media (max-width: 1180px) {
+  @media (max-width: 1200px) {
    main{
     border: none;
     width: 100%;
