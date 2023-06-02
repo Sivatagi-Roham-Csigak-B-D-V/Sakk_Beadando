@@ -6,8 +6,6 @@ class Jatekter {
   
     constructor(){
       this.#lepes = 0;
-     
-        $(function() {
             const szuloElem = $("section");
             let szamlalo = 0;
             const asideElem = $("aside");
@@ -61,7 +59,6 @@ class Jatekter {
               }
             }
 
-          });
           $(window).on("elemKivalasztas", (event) => {
             if (this.#lepes % 2 === 0) {
            
