@@ -13,9 +13,16 @@ class Bastya {
         return "&#9820;"
         }
     }
+    lepes_tomb(index){
+        let tomb=[]
+        tomb.push(this.Lepesf(index))
+        tomb.push(this.lepesj(index))
+        tomb.push(this.Lepesb(index))
+        tomb.push(this.lepesl(index))
+        return tomb
+    }
 
-
-    Lepesekf(index){
+    Lepesf(index){
         let szamok=[]
         let szamlalo=index
         while (szamlalo<64) {
