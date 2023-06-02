@@ -13,8 +13,8 @@ class Babu{
     }
     getNev(){
         return this.nev
-        
     }
+    
     setNev(nev){
         switch(nev){
             case "fekete_Paraszt":

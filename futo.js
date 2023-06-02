@@ -2,8 +2,11 @@ class Futo{
     constructor(szin){
         this.szin=szin
     }
+    Getszin(){
+        return this.szin
+    }
     kod(){
-        if (this.szin=="feher"){
+        if (Getszin()=="feher"){
          return "&#9815;"
         }
         else{
