@@ -1,18 +1,7 @@
 class Kiralyno{
     constructor(szin){
-        this.szin=szin
     }
-    Getszin(){
-        return this.szin
-    }
-    kod(){
-        if (this.Getszin()=="feher"){
-         return "&#9813;"
-        }
-        else{
-        return "&#9819;"
-        }
-    }
+
     lepes_tomb(index){
         let tomb=[]
         tomb.push(this.Lepesekbf(index))
