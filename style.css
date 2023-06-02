@@ -80,19 +80,23 @@ section{
 }
 .jelolo{
     padding-top: 10px;
-    width: 70px;
+    width: 80px;
     height: 70px;
     text-align: center;
+
 }
 .jelolo1{
-    width: 40px;
-    height: 400px;
+    width: 80px;
+    height: 80px;
     float: right;
     padding: 0;
 }
 h1,h3,footer{
     text-align: center;
 
+}
+p{
+    margin: 8px;
 }
 
 
@@ -178,8 +182,8 @@ h1,h3,footer{
     text-align: center;
 }
 .jelolo1{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     float: right;
     padding: 0;
 }
