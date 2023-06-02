@@ -1,18 +1,8 @@
 class Bastya {
-    constructor(szin){
-        this.szin=szin
+    constructor(){
+        
     }
-    Getszin(){
-        return this.szin
-    }
-    kod(){
-        if (this.Getszin()=="feher"){
-        return "&#9814;"
-        }
-        else{
-        return "&#9820;"
-        }
-    }
+
     lepes_tomb(index){
         let tomb=[]
         tomb.push(this.Lepesf(index))

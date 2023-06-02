@@ -1,18 +1,8 @@
 class Paraszt{
     #elso;
-    constructor(szin){
-        this.szin=szin
+    constructor(szuloelem){
         this.#elso="elso"
-    }
-    Getszin(){
-      return this.szin
-    }
-    kod() {
-      if (this.Getszin() === "feher") {
-        return "\u2659";
-      } else {
-        return "&#9823;";
-      }
+       
     }
     Lepesek(){
         if (elso="elso"){

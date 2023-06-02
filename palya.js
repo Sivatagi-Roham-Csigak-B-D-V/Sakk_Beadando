@@ -7,6 +7,7 @@ class Palya {
       szuloElem.append(this.divElem);
       
       this.applyBackground();
+      
     }
   
     applyBackground() {

@@ -1,18 +1,7 @@
 class Futo{
-    constructor(szin){
-        this.szin=szin
+    constructor(){
     }
-    Getszin(){
-        return this.szin
-    }
-    kod(){
-        if (this.Getszin()=="feher"){
-         return "&#9815;"
-        }
-        else{
-        return "&#9821;"
-        }
-    }
+
     lepes_tomb(index){
         let tomb=[]
         tomb.push(this.Lepesekbf(index))
