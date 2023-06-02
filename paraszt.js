@@ -4,9 +4,11 @@ class Paraszt{
         this.szin=szin
         this.#elso="elso"
     }
-  
+    Getszin(){
+      return this.szin
+    }
     kod() {
-      if (this.szin === "feher") {
+      if (this.Getszin() === "feher") {
         return "\u2659";
       } else {
         return "&#9823;";

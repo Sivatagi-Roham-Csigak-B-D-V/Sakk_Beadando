@@ -1,15 +1,20 @@
-class Bastya{
+class Bastya {
     constructor(szin){
         this.szin=szin
     }
+    Getszin(){
+        return this.szin
+    }
     kod(){
-        if (this.szin=="feher"){
-         return "&#9814;"
+        if (this.Getszin()=="feher"){
+        return "&#9814;"
         }
         else{
         return "&#9820;"
         }
-     }
+    }
+
+
     Lepesekf(index){
         let szamok=[]
         let szamlalo=index
