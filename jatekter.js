@@ -18,6 +18,12 @@ class Jatekter {
     const infoPanel = new InfoPanel(asideElem);
     const playerPTag = $(asideElem).find("p").first();
     const jatekfolyamat = $(asideElem).find("p").last();
+    const bastya = new Bastya();
+    const lo = new Lo();
+    const futo = new Futo()
+    const kiralyno = new Kiralyno();
+    const kiraly = new Kiraly();
+    const paraszt = new Paraszt();
     for (let index = 1; index < 65; index++) {
       const id = index; // Generate a unique ID for each instance
       const palya = new Palya(index, szuloElem, id);
@@ -26,32 +32,6 @@ class Jatekter {
       const obj = lista[index - 1];
       if (obj && obj.szimbolumkod) {
         cella.html(obj.szimbolumkod); // Set the HTML content of the cell to the szimbolumkod
-      }
-
-      if (index == 1 || index == 8) {
-        const bastya = new Bastya();
-      } else if (index == 2 || index == 7) {
-        const lo = new Lo();
-      } else if (index == 3 || index == 6) {
-        const futo = new Futo();
-      } else if (index == 4) {
-        const kiralyno = new Kiralyno();
-      } else if (index == 5) {
-        const kiraly = new Kiraly();
-      } else if (index > 8 && index < 17) {
-        const paraszt = new Paraszt();
-      } else if (index == 57 || index == 64) {
-        const bastya = new Bastya();
-      } else if (index == 58 || index == 63) {
-        const lo = new Lo();
-      } else if (index == 59 || index == 62) {
-        const futo = new Futo();
-      } else if (index == 60) {
-        const kiralyno = new Kiralyno();
-      } else if (index == 61) {
-        const kiraly = new Kiraly();
-      } else if (index > 48 && index < 57) {
-        const paraszt = new Paraszt();
       }
       if (szamlalo === 16) {
         szamlalo = 0;
@@ -63,6 +43,59 @@ class Jatekter {
       } else {
         playerPTag.text("jelenlegi Játékos: fekete");
       }
+      const hely=event.detail.id
+      const valasztott=(lista[hely-1].szimbolumkod)
+      console.log(valasztott)
+      if (valasztott=="&#9814;" || valasztott=="&#9820;"){
+        let lepes=bastya.lepes_tomb(hely)
+        for (let index = 0; index < lepes.length; index++) {
+          console.log("van")
+          for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
+            console.log(lepes[index][szamlalo])
+            }
+          }
+        }
+      if (valasztott=="&#9821;" || valasztott=="&#9815;"){
+        let lepes=futo.lepes_tomb(hely)
+        for (let index = 0; index < lepes.length; index++) {
+          console.log("van")
+          for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
+            console.log(lepes[index][szamlalo])
+            }
+          }
+        }
+      if (valasztott=="&#9816;" || valasztott=="&#9822;"){
+        let lepes=lo.lepes(hely)
+        for (let index = 0; index < lepes.length; index++) {
+        }
+      }
+      if (valasztott=="&#9818;" || valasztott=="&#9812;"){
+        let lepes=bastya.lepes_tomb(hely)
+        for (let index = 0; index < lepes.length; index++) {
+          console.log("van")
+          for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
+            console.log(lepes[index][szamlalo])
+            }
+          }
+        }
+      if (valasztott=="&#9813;" || valasztott=="&#9819;"){
+        let lepes=kiralyno.lepes_tomb(hely)
+        for (let index = 0; index < lepes.length; index++) {
+          console.log("van")
+          for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
+            console.log(lepes[index][szamlalo])
+            }
+          }
+        }
+        if (valasztott=="&#9823;" || valasztott=="&#9817;"){
+        let lepes=bastya.lepes_tomb(hely)
+        for (let index = 0; index < lepes.length; index++) {
+          console.log("van")
+          for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
+            console.log(lepes[index][szamlalo])
+            }
+          }
+        }
       this.#lepes++;
       infoPanel.updateLepes(this.#lepes);
       if (this.#lepes < 1000) {

@@ -6,9 +6,9 @@ class Bastya {
     lepes_tomb(index){
         let tomb=[]
         tomb.push(this.Lepesf(index))
-        tomb.push(this.lepesj(index))
+        tomb.push(this.Lepesj(index))
         tomb.push(this.Lepesb(index))
-        tomb.push(this.lepesl(index))
+        tomb.push(this.Lepesl(index))
         return tomb
     }
 
@@ -21,7 +21,7 @@ class Bastya {
         }
         return szamok
     }
-    lepesj(index){
+    Lepesj(index){
         let szamok=[]
         let szamlalo=index
         while (szamlalo>0) {
@@ -30,19 +30,19 @@ class Bastya {
         }
         return szamok
     }
-    lepesb(index){
+    Lepesb(index){
         let szamok=[]
         let szamlalo=index
-        while(Lepes_Lehetoseg(index,szamlalo)){
+        while(this.Lepes_Lehetoseg(index,szamlalo)){
             szamok.push(szamlalo)
             szamlalo=szamlalo+1
          }
          return szamok
     }
-    lepesl(index){
+    Lepesl(index){
         let szamok=[]
         let szamlalo=index
-        while(szamlalo>-4 && Lepes_Lehetoseg(index,szamlalo)){
+        while(szamlalo>-4 && this.Lepes_Lehetoseg(index,szamlalo)){
             szamok.push(szamlalo)
             szamlalo=szamlalo-1
         }
@@ -51,7 +51,7 @@ class Bastya {
     
     Lepes_Lehetoseg(index,szamlalo){
         let sor=index/8
-        sor=hatar(sor)
+        sor=this.hatar(sor)
         szamlalo=szamlalo/8
         let viszintes=sor<=szamlalo
         let viszintes2=sor+1>=szamlalo

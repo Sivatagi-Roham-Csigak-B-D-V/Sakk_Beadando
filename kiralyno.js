@@ -5,16 +5,16 @@ class Kiralyno{
     lepes_tomb(index){
         let tomb=[]
         tomb.push(this.Lepesekbf(index))
-        tomb.push(this.lepesekjf(index))
+        tomb.push(this.Lepesekjf(index))
         tomb.push(this.Lepesekjl(index))
         tomb.push(this.Lepesekbl(index))
         tomb.push(this.Lepesf(index))
-        tomb.push(this.lepesj(index))
+        tomb.push(this.Lepesj(index))
         tomb.push(this.Lepesb(index))
-        tomb.push(this.lepesl(index))
+        tomb.push(this.Lepesl(index))
         return tomb
     }
-    Lepesekf(index){
+    Lepesf(index){
         let szamok=[]
         let szamlalo=index
         while (szamlalo<64) {
@@ -23,7 +23,7 @@ class Kiralyno{
         }
         return szamok
     }
-    lepesj(index){
+    Lepesj(index){
         let szamok=[]
         let szamlalo=index
         while (szamlalo>0) {
@@ -32,19 +32,19 @@ class Kiralyno{
         }
         return szamok
     }
-    lepesb(index){
+    Lepesb(index){
         let szamok=[]
         let szamlalo=index
-        while(Lepes_Lehetoseg(index,szamlalo)){
+        while(this.Lepes_Lehetoseg(index,szamlalo)){
             szamok.push(szamlalo)
             szamlalo=szamlalo+1
          }
          return szamok
     }
-    lepesl(index){
+    Lepesl(index){
         let szamok=[]
         let szamlalo=index
-        while(szamlalo>-4 && Lepes_Lehetoseg(index,szamlalo)){
+        while(szamlalo>-4 && this.Lepes_Lehetoseg(index,szamlalo)){
             szamok.push(szamlalo)
             szamlalo=szamlalo-1
         }
@@ -53,7 +53,7 @@ class Kiralyno{
     
     Lepes_Lehetoseg(index,szamlalo){
         let sor=index/8
-        sor=hatarr(sor)
+        sor=this.hatarr(sor)
         szamlalo=szamlalo/8
         let viszintes=sor<=szamlalo
         let viszintes2=sor+1>=szamlalo
@@ -61,57 +61,38 @@ class Kiralyno{
     }
     Lepesekjf(index){
         let szamok=[]
-        let szamlalo=hatarr(index/8)
-        if (szamlalo>hatarf(index%8)){
-            szamlalo=hatarf(index%8)
-        }
-        while (szamlalo<8 && szam+9<=64) {
+        let szam=index
+        while (this.hatarr((szam+8)/8)==this.hatarr((szam+9)/8) && szam+9<=64) {
             szam=szam+9
             szamok.push(szam)
-            szamlalo=szamlalo+1
         }
         return szamok
 
     }
-    lepesekbf(index){
-        szamlalo=hatarf(index%8)
-        if (szamlalo>hatarr(index/8)){
-            szamlalo=hatarr(index/8)
-        }
-        szam=index
-        while (szamlalo>0 && szam+7<64) {
+    Lepesekbf(index){
+        let szam=index
+        let szamok=[]
+        while (this.hatarr((szam+8)/8)==this.hatarr((szam+7)/8) && szam+7<64) {
             szam=szam+7
             szamok.push(szam)
-            szamlalo=szamlalo-1
         }
         return szamok
     }
-    lepesekjl(index){
-        szam=index
-        szamlalo=hatarr(index/8)
-        if (szamlalo>hatarf(index%8)){
-            szamlalo=hatarf(index%8)
-
-        }
-        console.log(szamlalo)
-        while (szamlalo<8 && szam-9>0) {
+    Lepesekjl(index){
+        let szam=index
+        let szamok=[]
+        while (this.hatarr((szam-8)/8)==this.hatarr((szam-9)/8) && szam-9>0) {
             szam=szam-9
             szamok.push(szam)
-            szamlalo=szamlalo+1
         }
         return szamok
     }   
-    lepesekbl(index){
-        Szam=index
-        szamlalo=hatarr(index/8)
-        if (szamlalo<hatarf(index%8)){
-            szamlalo=hatarf(index%8)
-
-        }
-        while (szamlalo<8 && szam-7<64) {
+    Lepesekbl(index){
+        let szam=index
+        let szamok=[]
+        while (this.hatarr((szam-8)/8)==this.hatarr((szam-7)/8) && szam-7>0) {
             szam=szam-7
             szamok.push(szam)
-            szamlalo=szamlalo+1
         }
         return szamok
     }

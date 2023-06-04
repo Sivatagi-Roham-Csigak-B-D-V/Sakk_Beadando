@@ -2,67 +2,66 @@ class Lo{
     constructor(){
     }
 
-    lepes(){
+    lepes(hely){
     let egy=[]
-    let hely=64
-   console.log("van")
-    egy.push(lepes1(hely))
-    egy.push(lepes2(hely))
-    egy.push(lepes3(hely))
-    egy.push(lepes4(hely))
-    egy.push(lepes5(hely))
-    egy.push(lepes6(hely))
-    egy.push(lepes7(hely))
-    egy.push(lepes8(hely))
+    console.log("van")
+    egy.push(this.lepes1(hely))
+    egy.push(this.lepes2(hely))
+    egy.push(this.lepes3(hely))
+    egy.push(this.lepes4(hely))
+    egy.push(this.lepes5(hely))
+    egy.push(this.lepes6(hely))
+    egy.push(this.lepes7(hely))
+    egy.push(this.lepes8(hely))
     return egy
     }
     
     lepes1(index){
         let szam=index+2*8+1
         console.log("van")
-        if (lehet(szam,index)){
+        if (this.lehet(szam,index)){
             return szam
         }
     }
     lepes2(index){
         let szam=index+2*8-1
-        if (lehet(szam,index)){
+        if (this.lehet(szam,index)){
             return szam
         }
     }
     lepes3(index){
         let szam=index+2*1+8
-        if (lehet3(szam,index)){
+        if (this.lehet3(szam,index)){
             return szam
         }
     }
     lepes4(index){
         let szam=index+2*1-8
-        if (lehet2(szam,index)){
+        if (this.lehet2(szam,index)){
             return szam
         } 
     }
     lepes5(index){
         let szam=index-2*8+1
-        if (lehet1(szam,index)){
+        if (this.lehet1(szam,index)){
             return szam
         }
     }
     lepes6(index){
         let szam=index-2*8-1
-        if (lehet1(szam,index)){
+        if (this.lehet1(szam,index)){
             return szam
         }
     }
     lepes7(index){
         let szam=index-2*1+8
-        if (lehet3(szam,index)){
+        if (this.lehet3(szam,index)){
             return szam
         }
     }
     lepes8(index){
         let szam=index-2*1-8
-        if (lehet2(szam,index)){
+        if (this.lehet2(szam,index)){
             return szam
         }
     }
@@ -71,8 +70,8 @@ class Lo{
         let hatar1=szam>0
         let hatar2=szam<65
         if (hatar1&&hatar2){
-            let sor=sorok(index+8*2)
-            let hat=sorok(szam)
+            let sor=this.sorok(index+8*2)
+            let hat=this.sorok(szam)
             return sor==hat
         }
     }
@@ -80,8 +79,8 @@ class Lo{
         let hatar1=szam>0
         let hatar2=szam<65
         if (hatar1&&hatar2){
-            let sor=sorok(index-8*2)
-            let hat=sorok(szam)
+            let sor=this.sorok(index-8*2)
+            let hat=this.sorok(szam)
             return sor==hat
         }
     }
@@ -89,8 +88,8 @@ class Lo{
         let hatar1=szam>0
         let hatar2=szam<65
         if (hatar1 &&hatar2){
-            let sor=sorok(index-8)
-            let hat=sorok(szam)
+            let sor=this.sorok(index-8)
+            let hat=this.sorok(szam)
             return sor==hat
         }
     }
@@ -98,8 +97,8 @@ class Lo{
         let hatar1=szam>0
         let hatar2=szam<65
         if (hatar1&&hatar2){
-            let sor=sorok(index+8)
-            let hat=sorok(szam)
+            let sor=this.sorok(index+8)
+            let hat=this.sorok(szam)
             return sor==hat
         }
     }
