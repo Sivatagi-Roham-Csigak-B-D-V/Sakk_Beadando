@@ -16,10 +16,8 @@ class Palya {
           }
         }
       })
-
-      
     }
-  
+
     applyBackground() {
       if (this.index <= 8 || (this.index > 16 && this.index <= 24) || (this.index > 32 && this.index <= 40) || (this.index > 48 && this.index <= 56)) {
         if (this.index % 2 === 0) {
