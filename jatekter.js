@@ -1,6 +1,5 @@
 import Palya from "./palya.js";
 import InfoPanel from "./infoPanel.js";
-import Babu from "./babu.js";
 import Bastya from "./bastya.js";
 import Lo from "./lo.js";
 import Futo from "./futo.js";
@@ -46,7 +45,6 @@ class Jatekter {
       const hely=event.detail.id
       const valasztott=(lista[hely-1].szimbolumkod)
       console.log(valasztott)
-      
       if (valasztott=="&#9814;" || valasztott=="&#9820;"){
         let lepes=bastya.lepes_tomb(hely)
         for (let index = 0; index < lepes.length; index++) {
