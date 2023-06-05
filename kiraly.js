@@ -2,87 +2,65 @@ class Kiraly{
     constructor(){
         
     }
-    lepesek(index){
+    lepes(index){
         let tomb=[]
-        tomb.push(lepesek1(index))
-        tomb.push(lepesek2(index))
-        tomb.push(lepesek3(index))
-        tomb.push(lepesek4(index))
-        tomb.push(lepesek5(index))
-        tomb.push(lepesek6(index))
-        tomb.push(lepesek7(index))
-        tomb.push(lepesek8(index))
+        tomb.push(this.Lepesek1(index))
+        tomb.push(this.Lepesek2(index))
+        tomb.push(this.Lepesek3(index))
+        tomb.push(this.Lepesek4(index))
+        tomb.push(this.Lepesek5(index))
+        tomb.push(this.Lepesek6(index))
+        tomb.push(this.Lepesek7(index))
+        tomb.push(this.Lepesek8(index))
         return tomb
     }
     Lepesek1(index){
         let szam=index+7
-        if (lehet(szam,index+8)){
+        if (this.hatar(szam/8)==this.hatar((index+8)/8)&&szam<65){
             return szam
         }
     }
-    lepesek2(index){
+    Lepesek2(index){
         let szam=index+8
-        if (lehet(szam,index+8)){
+        if (this.hatar(szam/8)==this.hatar((index+8)/8)&&szam<65){
             return szam
         }
     }
-    lepesek3(index){
+    Lepesek3(index){
         let szam=index+9
-        if (lehet(szam,index+8)){
+        if (this.hatar(szam/8)==this.hatar((index+8)/8)&&szam<65){
             return szam
         }
     }
     Lepesek4(index){
         let szam=index+1
-        if (lehet(szam,index)){
+        if (this.hatar(szam/8)==this.hatar(index/8)){
             return szam
         }
     }
-    lepesek5(index){
+    Lepesek5(index){
         let szam=index-1
-        if (lehet(szam,index)){
+        if (this.hatar(szam/8)==this.hatar(index/8)){
             return szam
         }
     }
-    lepesek6(index){
+    Lepesek6(index){
         let szam=index-7
-        if (lehet(szam,index-8)){
+        if (this.hatar(szam/8)==this.hatar((index-8)/8)&&szam>0){
             return szam
         }
     }
     Lepesek7(index){
         let szam=index-8
-        if (lehet(szam,index-8)){
+        if (this.hatar(szam/8)==this.hatar((index-8)/8)&&szam>0){
             return szam
         }
     }
-    lepesek8(index){
+    Lepesek8(index){
         let szam=index-9
-        if (lehet(szam,index-8)){
+        if (this.hatar(szam/8)==this.hatar((index-8)/8)&&szam>0){
             return szam
         }
-    }
-
-    lehet(szam,index){
-        let hatar2=szam<65
-        if (hatar2){
-            let sor=sorok(index+8)
-            let hat=sorok(szam)
-            return sor==hat
-        }
-    }
-    lehet1(szam,index){
-        let hatar1=szam>0
-        if (hatar1){
-            let sor=sorok(index-8)
-            let hat=sorok(szam)
-            return sor==hat
-        }
-    }
-    lehet2(szam,index){
-            let sor=sorok(index)
-            let hat=sorok(szam)
-            return sor==hat
     }
     hatar(index){
         if (index>7){

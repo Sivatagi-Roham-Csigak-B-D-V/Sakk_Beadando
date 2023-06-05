@@ -13,7 +13,6 @@ class Palya {
         if(this.#allapot){
           this.esemenyTriggger();
         }
-        this.#allapot=false
       })
 
       

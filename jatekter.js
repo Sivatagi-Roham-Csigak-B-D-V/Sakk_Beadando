@@ -70,12 +70,8 @@ class Jatekter {
         }
       }
       if (valasztott=="&#9818;" || valasztott=="&#9812;"){
-        let lepes=bastya.lepes_tomb(hely)
-        for (let index = 0; index < lepes.length; index++) {
-          console.log("van")
-          for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
-            console.log(lepes[index][szamlalo])
-            }
+          let lepes=kiraly.lepes(hely)
+          for (let index = 0; index < lepes.length; index++) {
           }
         }
       if (valasztott=="&#9813;" || valasztott=="&#9819;"){
