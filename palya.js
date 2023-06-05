@@ -10,8 +10,10 @@ class Palya {
       
       this.applyBackground();
       this.divElem.on("click",()=>{
-        if(this.#allapot){
-          this.esemenyTriggger();
+        if(!(document.getElementById(index).innerHTML=="")){
+          if(this.#allapot){
+            this.esemenyTriggger();
+          }
         }
       })
 
