@@ -46,6 +46,7 @@ class Jatekter {
       const hely=event.detail.id
       const valasztott=(lista[hely-1].szimbolumkod)
       console.log(valasztott)
+      
       if (valasztott=="&#9814;" || valasztott=="&#9820;"){
         let lepes=bastya.lepes_tomb(hely)
         for (let index = 0; index < lepes.length; index++) {
@@ -85,12 +86,14 @@ class Jatekter {
         }
         if (valasztott=="&#9823;" || valasztott=="&#9817;"){
         let lepes=bastya.lepes_tomb(hely)
+        let tomb=[]
         for (let index = 0; index < lepes.length; index++) {
           console.log("van")
           for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
             console.log(lepes[index][szamlalo])
             }
           }
+          this.megvilagitas(lista,tomb)
         }
       this.#lepes++;
       infoPanel.updateLepes(this.#lepes);
@@ -100,6 +103,9 @@ class Jatekter {
         jatekfolyamat.text("A játék vége!");
       }
     });
+  }
+  megvilagitas(lista,tomb){
+
   }
 }
 
