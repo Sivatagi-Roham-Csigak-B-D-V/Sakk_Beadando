@@ -7,26 +7,26 @@ class Kiraly{
         if (typeof(this.Lepesek1(hely))!=="undefined"){
             egy.push(this.Lepesek1(hely))
             }
-        if (typeof(this.lepesek2(hely))!=="undefined"){
-            egy.push(this.lepesek2(hely))
+        if (typeof(this.Lepesek2(hely))!=="undefined"){
+            egy.push(this.Lepesek2(hely))
         }
-        if (typeof(this.lepesek3(hely))!=="undefined"){
-            egy.push(this.lepesek3(hely))
+        if (typeof(this.Lepesek3(hely))!=="undefined"){
+            egy.push(this.Lepesek3(hely))
         }
         if (typeof(this.Lepesek4(hely))!=="undefined"){
             egy.push(this.Lepesek4(hely))
         }
-        if (typeof(this.lepesek5(hely))!=="undefined"){
-            egy.push(this.lepesek5(hely))
+        if (typeof(this.Lepesek5(hely))!=="undefined"){
+            egy.push(this.Lepesek5(hely))
         }
-        if (typeof(this.lepesek6(hely))!=="undefined"){
-            egy.push(this.lepesek6(hely))
+        if (typeof(this.Lepesek6(hely))!=="undefined"){
+            egy.push(this.Lepesek6(hely))
         }
         if (typeof(this.Lepesek7(hely))!=="undefined"){
             egy.push(this.Lepesek7(hely))
             }
-        if (typeof(this.lepesek8(hely))!=="undefined"){
-            egy.push(this.lepesek8(hely))
+        if (typeof(this.Lepesek8(hely))!=="undefined"){
+            egy.push(this.Lepesek8(hely))
             }
         return egy
     }

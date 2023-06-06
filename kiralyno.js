@@ -52,17 +52,14 @@ class Kiralyno{
     }
     
     Lepes_Lehetoseg(index,szamlalo){
-        let sor=index/8
-        sor=this.hatarr(sor)
-        szamlalo=szamlalo/8
-        let viszintes=sor<=szamlalo
-        let viszintes2=sor+1>=szamlalo
-        return viszintes&& viszintes2
+        let elso=this.hatar(index/8)
+        let masodik=this.hatar(szamlalo/8)
+        return masodik==elso
     }
     Lepesekjf(index){
         let szamok=[]
         let szam=index
-        while (this.hatarr((szam+8)/8)==this.hatarr((szam+9)/8) && szam+9<=64) {
+        while (this.hatar((szam+8)/8)==this.hatar((szam+9)/8) && szam+9<=64) {
             szam=szam+9
             szamok.push(szam)
         }
@@ -72,7 +69,7 @@ class Kiralyno{
     Lepesekbf(index){
         let szam=index
         let szamok=[]
-        while (this.hatarr((szam+8)/8)==this.hatarr((szam+7)/8) && szam+7<64) {
+        while (this.hatar((szam+8)/8)==this.hatar((szam+7)/8) && szam+7<64) {
             szam=szam+7
             szamok.push(szam)
         }
@@ -81,7 +78,7 @@ class Kiralyno{
     Lepesekjl(index){
         let szam=index
         let szamok=[]
-        while (this.hatarr((szam-8)/8)==this.hatarr((szam-9)/8) && szam-9>0) {
+        while (this.hatar((szam-8)/8)==this.hatar((szam-9)/8) && szam-9>0) {
             szam=szam-9
             szamok.push(szam)
         }
@@ -90,62 +87,39 @@ class Kiralyno{
     Lepesekbl(index){
         let szam=index
         let szamok=[]
-        while (this.hatarr((szam-8)/8)==this.hatarr((szam-7)/8) && szam-7>0) {
+        while (this.hatar((szam-8)/8)==this.hatar((szam-7)/8) && szam-7>0) {
             szam=szam-7
             szamok.push(szam)
         }
         return szamok
     }
-     hatarr(index){
-        if (index>7){
+    hatar(index){
+        if (index>8){
             return 8
+        }
+        if (index>7){
+            return 7
         }
         if (index>6){
-            return 7
-        }
-        if (index>5){
             return 6
         }
-        if (index>4){
+        if (index>5){
             return 5
+        }
+        if (index>4){
+            return 4
         }
         if (index>3){
-            return 4
+            return 3
         }
         if (index>2){
-            return 3
+            return 2
         }
         if (index>1){
-            return 2
+            return 1
         }
         if (index>0){
-            return 1
-        }
-    }
-     hatarf(index){
-        if (index==7){
-            return 7
-        }
-        if (index==6){
-            return 5
-        }
-        if (index==5){
-            return 4
-        }
-        if (index==4){
-            return 3
-        }
-        if (index==3){
-            return 2
-        }
-        if (index==2){
-            return 1
-        }
-        if (index==1){
             return 0
-        }
-        if (index==0){
-            return 8
         }
     }
 }

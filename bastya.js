@@ -15,18 +15,19 @@ class Bastya {
     Lepesf(index){
         let szamok=[]
         let szamlalo=index
-        while (szamlalo<64) {
+        while (szamlalo<65) {
             szamok.push(szamlalo)
             szamlalo=szamlalo+8
         }
         return szamok
     }
-    Lepesj(index){
+    Lepesl(index){
         let szamok=[]
         let szamlalo=index
         while (szamlalo>0) {
             szamok.push(szamlalo)
             szamlalo=szamlalo-8
+            
         }
         return szamok
     }
@@ -36,28 +37,28 @@ class Bastya {
         while(this.Lepes_Lehetoseg(index,szamlalo)){
             szamok.push(szamlalo)
             szamlalo=szamlalo+1
-         }
-         return szamok
+        }
+        return szamok
     }
-    Lepesl(index){
+    Lepesj(index){
         let szamok=[]
         let szamlalo=index
-        while(szamlalo>-4 && this.Lepes_Lehetoseg(index,szamlalo)){
+        while(this.Lepes_Lehetoseg(index,szamlalo)){
             szamok.push(szamlalo)
-            szamlalo=szamlalo-1
+            szamlalo=szamlalo+1
         }
         return szamok
     }
     
     Lepes_Lehetoseg(index,szamlalo){
-        let sor=index/8
-        sor=this.hatar(sor)
-        szamlalo=szamlalo/8
-        let viszintes=sor<=szamlalo
-        let viszintes2=sor+1>=szamlalo
-        return viszintes&& viszintes2
+        let elso=this.hatar(index/8)
+        let masodik=this.hatar(szamlalo/8)
+        return masodik==elso
     }
     hatar(index){
+        if (index>8){
+            return 8
+        }
         if (index>7){
             return 7
         }
