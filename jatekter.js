@@ -42,194 +42,211 @@ class Jatekter {
       const hely=event.detail.id
       kivalsztottTarto.push(event)
       let eredeti_hely=kivalsztottTarto[0]
-      console.log(eredeti_hely)
       let babu
       if (kivalsztottTarto.length==2){
         eredeti_hely=kivalsztottTarto[0]
         babu=document.getElementById(eredeti_hely.detail.id).innerHTML
       }
       const valasztott=document.getElementById(event.detail.id).innerHTML
-      console.log(valasztott)
-      if (valasztott=="♖" || valasztott=="♜"){
-        if (kivalsztottTarto.length==1){
-        let lepes=bastya.lepes_tomb(hely)
-        for (let index = 0; index < lepes.length; index++) {
-          for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
-            if (valasztott=="♜"){
-              if (this.lephet_fekete(lepes[index][szamlalo],eredeti_hely)){
-              tomb.push(lepes[index][szamlalo])
-                if (document.getElementById(lepes[index][szamlalo]).innerHTML!="" && lepes[index][szamlalo]!=eredeti_hely.detail.id){
+      if(!(kivalsztottTarto.length==2&&hely==eredeti_hely.detail.id)){
+        if (valasztott=="♖" || valasztott=="♜"){
+          if (kivalsztottTarto.length==1){
+          let lepes=bastya.lepes_tomb(hely)
+          for (let index = 0; index < lepes.length; index++) {
+            for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
+              if (valasztott=="♜"){
+                if (this.lephet_fekete(lepes[index][szamlalo],eredeti_hely)){
+                tomb.push(lepes[index][szamlalo])
+                  if (document.getElementById(lepes[index][szamlalo]).innerHTML!="" && lepes[index][szamlalo]!=eredeti_hely.detail.id){
+                    szamlalo=lepes[index].length
+                  }
+                }
+                else{
                   szamlalo=lepes[index].length
                 }
               }
               else{
-                szamlalo=lepes[index].length
-              }
-            }
-            else{
-              if (this.lephet_feher(lepes[index][szamlalo],eredeti_hely)){
-                tomb.push(lepes[index][szamlalo])
-                  if (document.getElementById(lepes[index][szamlalo]).innerHTML!="" && lepes[index][szamlalo]!=eredeti_hely.detail.id){
-                    szamlalo=lepes[index].length
-                  }
-                }
-                else{
-                  szamlalo=lepes[index].length
-                  }
-                }
-            }
-          }
-          //mozgatas(hely,tomb)
-          this.szinezes(tomb)
-        }
-        else{
-          this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
-          }
-        }
-      if (valasztott=="♗" || valasztott=="♝"){
-        if (kivalsztottTarto.length==1){
-        let lepes=futo.lepes_tomb(hely)
-        for (let index = 0; index < lepes.length; index++) {
-          for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
-            if (valasztott=="♝"){
-                if (this.lephet_fekete(lepes[index][szamlalo],eredeti_hely)){
-                tomb.push(lepes[index][szamlalo])
-                  if (document.getElementById(lepes[index][szamlalo]).innerHTML!=""){
-                    szamlalo=lepes[index].length
-                  }
-                }
-              
-                else{
-                  szamlalo=lepes[index].length
-                }
-              }
-            else{
-              if (this.lephet_feher(lepes[index][szamlalo],eredeti_hely)){
-                tomb.push(lepes[index][szamlalo])
-                  if (document.getElementById(lepes[index][szamlalo]).innerHTML!=""){
-                    szamlalo=lepes[index].length
-                  }
-                }
-                else{
-                  szamlalo=lepes[index].length
-            }
-            }
-            }
-          }
-          //mozgatas(hely,tomb)
-          this.szinezes(tomb)
-        }
-        else{
-          this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
-          }
-      }
-      if (valasztott=="♞" || valasztott=="♘"){
-        if (kivalsztottTarto.length==1){
-        let lepes=lo.lepes(hely)
-        for (let index = 0; index < lepes.length; index++) {
-          if(valasztott=="♞"){
-            if (this.lephet_fekete(lepes[index],eredeti_hely)){
-            tomb.push(lepes[index])
-          }
-        }
-          else {
-          if (this.lephet_feher(lepes[index],eredeti_hely)){
-          tomb.push(lepes[index])
-          }
-          }
-        }
-        this.szinezes(tomb)
-        }
-        else{
-          this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
-          }
-        //mozgatas(hely,tomb)
-      }
-      if (valasztott=="♔" || valasztott=="♚"){
-        if (kivalsztottTarto.length==1){
-        let lepes=kiraly.lepesek(hely)
-        for (let index = 0; index < lepes.length; index++) {
-          if(valasztott=="♚"){
-            if (this.lephet_fekete(lepes[index],eredeti_hely)){
-            tomb.push(lepes[index])
-            }
-          }
-            else {
-           if (this.lephet_feher(lepes[index],eredeti_hely)){
-            tomb.push(lepes[index])
-            }
-          }
-        }
-        this.szinezes(tomb)
-        }
-        else{
-          this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
-          }
-        //mozgatas(hely,tomb)
-        }
-      if (valasztott=="♕" || valasztott=="♛"){
-        if (kivalsztottTarto.length==1){
-        let lepes=kiralyno.lepes_tomb(hely)
-        for (let index = 0; index < lepes.length; index++) {
-          for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
-            if (valasztott=="♛"){
-                if (this.lephet_fekete(lepes[index][szamlalo],eredeti_hely)){
-                tomb.push(lepes[index][szamlalo])
-                  if (document.getElementById(lepes[index][szamlalo]).innerHTML!="" && lepes[index][szamlalo]!=eredeti_hely.detail.id){
-                    szamlalo=lepes[index].length
-                  }
-                }
-              }
-                else{
-                  if (this.lephet_feher(lepes[index][szamlalo],eredeti_hely)){
-                    tomb.push(lepes[index][szamlalo])
-                      if (document.getElementById(lepes[index][szamlalo]).innerHTML!="" && lepes[index][szamlalo]!=eredeti_hely.detail.id){
-                        szamlalo=lepes[index].length
-                      }
-                    }
-                    else{
+                if (this.lephet_feher(lepes[index][szamlalo],eredeti_hely)){
+                  tomb.push(lepes[index][szamlalo])
+                    if (document.getElementById(lepes[index][szamlalo]).innerHTML!="" && lepes[index][szamlalo]!=eredeti_hely.detail.id){
                       szamlalo=lepes[index].length
+                    }
                   }
-                }
+                  else{
+                    szamlalo=lepes[index].length
+                    }
+                  }
               }
             }
-          //mozgatas(hely,tomb)
-          this.szinezes(tomb)
+            //mozgatas(hely,tomb)
+            this.szinezes(tomb)
           }
-        else{
-          this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
+          else{
+            this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
+            }
           }
+        if (valasztott=="♗" || valasztott=="♝"){
+          if (kivalsztottTarto.length==1){
+          let lepes=futo.lepes_tomb(hely)
+          for (let index = 0; index < lepes.length; index++) {
+            for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
+              if (valasztott=="♝"){
+                  if (this.lephet_fekete(lepes[index][szamlalo],eredeti_hely)){
+                  tomb.push(lepes[index][szamlalo])
+                    if (document.getElementById(lepes[index][szamlalo]).innerHTML!=""){
+                      szamlalo=lepes[index].length
+                    }
+                  }
+                
+                  else{
+                    szamlalo=lepes[index].length
+                  }
+                }
+              else{
+                if (this.lephet_feher(lepes[index][szamlalo],eredeti_hely)){
+                  tomb.push(lepes[index][szamlalo])
+                    if (document.getElementById(lepes[index][szamlalo]).innerHTML!=""){
+                      szamlalo=lepes[index].length
+                    }
+                  }
+                  else{
+                    szamlalo=lepes[index].length
+              }
+              }
+              }
+            }
+            //mozgatas(hely,tomb)
+            this.szinezes(tomb)
+          }
+          else{
+            this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
+            }
         }
-        if (valasztott=="♙" || valasztott=="♟"){
-        if (kivalsztottTarto.length==1){
-        let lepes=paraszt.lepes(hely,valasztott)
-        for (let index = 0; index < lepes.length; index++) {
-          if(valasztott=="♟"){
-            if (this.lephet_fekete(lepes[index],eredeti_hely)){
-            tomb.push(lepes[index])
+        if (valasztott=="♞" || valasztott=="♘"){
+          if (kivalsztottTarto.length==1){
+          let lepes=lo.lepes(hely)
+          for (let index = 0; index < lepes.length; index++) {
+            if(valasztott=="♞"){
+              if (this.lephet_fekete(lepes[index],eredeti_hely)){
+              tomb.push(lepes[index])
             }
           }
             else {
-              if(this.lephet_feher(lepes[index],eredeti_hely)){
+            if (this.lephet_feher(lepes[index],eredeti_hely)){
             tomb.push(lepes[index])
             }
+            }
           }
-          
+          this.szinezes(tomb)
+          }
+          else{
+            this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
+            }
           //mozgatas(hely,tomb)
         }
-        this.szinezes(tomb)
+        if (valasztott=="♔" || valasztott=="♚"){
+          if (kivalsztottTarto.length==1){
+          let lepes=kiraly.lepesek(hely)
+          for (let index = 0; index < lepes.length; index++) {
+            if(valasztott=="♚"){
+              if (this.lephet_fekete(lepes[index],eredeti_hely)){
+              tomb.push(lepes[index])
+              }
+            }
+              else {
+             if (this.lephet_feher(lepes[index],eredeti_hely)){
+              tomb.push(lepes[index])
+              }
+            }
+          }
+          this.szinezes(tomb)
+          }
+          else{
+            this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
+            }
+          //mozgatas(hely,tomb)
+          }
+        if (valasztott=="♕" || valasztott=="♛"){
+          if (kivalsztottTarto.length==1){
+          let lepes=kiralyno.lepes_tomb(hely)
+          for (let index = 0; index < lepes.length; index++) {
+            for (let szamlalo = 0; szamlalo < lepes[index].length; szamlalo++) {
+              if (valasztott=="♛"){
+                  if (this.lephet_fekete(lepes[index][szamlalo],eredeti_hely)){
+                  tomb.push(lepes[index][szamlalo])
+                    if (document.getElementById(lepes[index][szamlalo]).innerHTML!="" && lepes[index][szamlalo]!=eredeti_hely.detail.id){
+                      szamlalo=lepes[index].length
+                    }
+                  }
+                }
+                  else{
+                    if (this.lephet_feher(lepes[index][szamlalo],eredeti_hely)){
+                      tomb.push(lepes[index][szamlalo])
+                        if (document.getElementById(lepes[index][szamlalo]).innerHTML!="" && lepes[index][szamlalo]!=eredeti_hely.detail.id){
+                          szamlalo=lepes[index].length
+                        }
+                      }
+                      else{
+                        szamlalo=lepes[index].length
+                    }
+                  }
+                }
+              }
+            //mozgatas(hely,tomb)
+            this.szinezes(tomb)
+            }
+          else{
+            this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
+            }
+          }
+          if (valasztott=="♙" || valasztott=="♟"){
+          if (kivalsztottTarto.length==1){
+          let lepes=paraszt.lepes(hely,valasztott)
+          for (let index = 0; index < lepes.length; index++) {
+            babu=document.getElementById(lepes[index]).innerHTML
+                if (document.getElementById(eredeti_hely.detail.id).innerHTML=="♟"){
+                  if (("♔"==babu|| "♕"==babu ||"♖"==babu ||"♗"==babu ||"♘"==babu ||"♙"==babu) &&!(eredeti_hely.detail.id+8==lepes[index] || eredeti_hely.detail.id+16==lepes[index]) ){
+                    tomb.push(lepes[index])
+                    }
+                  else{
+                    if (document.getElementById(lepes[index]).innerHTML=="" && eredeti_hely.detail.id+8==lepes[index] || eredeti_hely.detail.id+16==lepes[index])
+                      {
+                        tomb.push(lepes[0])
+                      }
+                  }
+                }
+                else{
+                  if (("♚"==babu|| "♛"==babu ||"♜"==babu ||"♝"==babu ||"♞"==babu ||"♟"==babu) &&!(eredeti_hely.detail.id-8==lepes[index] || eredeti_hely.detail.id-16==lepes[index]) ){
+                    tomb.push(lepes[index])
+                    }
+                  else{
+                    if (document.getElementById(lepes[index]).innerHTML=="" && eredeti_hely.detail.id-8==lepes[index] || eredeti_hely.detail.id-16==lepes[index])
+                      {
+                        
+                        tomb.push(lepes[index])
+                      }
+                  }
+                }
+              }
+              this.szinezes(tomb)
+            }
+        else{
+          this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
+        }
+        }
+        if (valasztott==""){
+          if (kivalsztottTarto.length==1){
+            kivalsztottTarto.pop()
+          }
+          else {
+            this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
+          } 
+        }
       }
       else{
-        this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
-      }
-      }
-      if (valasztott==""){
-        if (kivalsztottTarto.length==1){
-          kivalsztottTarto.pop()
-        }
-        else {
-          this.mozgatas(eredeti_hely.detail.id,tomb,babu,hely)
-        } 
+        kivalsztottTarto.pop()
+        kivalsztottTarto.pop()
+        this.vissza_szinezes();
       }
       if (kivalsztottTarto.length==2){
         this.vissza_szinezes();
@@ -251,7 +268,7 @@ class Jatekter {
       }
     });
   }
-  
+
   mozgatas(eredeti_hely,tomb,babu,hely){
     let szam=hely
     let valszthato=false
@@ -293,8 +310,6 @@ class Jatekter {
     }
   }
   lephet_feher(index,eredeti_hely){
-    console.log(index)
-    console.log(eredeti_hely.detail.id)
     let jo=true
     let babu=document.getElementById(index).innerHTML
     if (""!=babu && eredeti_hely.detail.id!=index){

@@ -45,13 +45,13 @@ class Paraszt{
         }
         lepes2(index){
             let szam=index-7
-            if (szam>0){
+            if (szam>0 &&this.hatar(szam)==this.hatar(index-8)){
                 return szam
             }
         }
         lepes3(index){
             let szam=index-9
-            if (szam>0){
+            if (szam>0 &&this.hatar(szam)==this.hatar(index-8)){
                 return szam
             }
         }
@@ -67,13 +67,14 @@ class Paraszt{
         }
         lepes6(index){
             let szam=index+7
-            if (szam<65){
+            if (szam<65&&this.hatar(szam)==this.hatar(index+8)){
                 return szam
             }
         }
         lepes7(index){
             let szam=index+9
-            if (szam<65){
+            
+            if (szam<65&&this.hatar(szam)==this.hatar(index+8)){
                 return szam
             }
         }
@@ -81,7 +82,38 @@ class Paraszt{
             let szam=index+2*8
             return szam
         }
+        hatar(index){
+            index=index/8
+            if (index>8){
+                return 8
+            }
+            if (index>7){
+                return 7
+            }
+            if (index>6){
+                return 6
+            }
+            if (index>5){
+                return 5
+            }
+            if (index>4){
+                return 4
+            }
+            if (index>3){
+                return 3
+            }
+            if (index>2){
+                return 2
+            }
+            if (index>1){
+                return 1
+            }
+            if (index>0){
+                return 0
+            }
+        }
     }
+    
   
   export default Paraszt;
   
