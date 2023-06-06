@@ -12,8 +12,8 @@ class Palya {
       this.divElem.on("click",()=>{
         if(this.#allapot){
           this.esemenyTriggger();
+          //this.setPosition();
         }
-        this.#allapot=false
       })
 
       
@@ -37,8 +37,11 @@ class Palya {
     esemenyTriggger(){
     const esemeny=new CustomEvent("elemKivalasztas",{detail:this});
     window.dispatchEvent(esemeny)
-    console.log(esemeny)
     }
+    /*setPosition(){
+      const esemeny=new CustomEvent("Movment",{detail:this})
+      window.dispatchEvent(esemeny)
+    }*/
   }
   
 export default Palya

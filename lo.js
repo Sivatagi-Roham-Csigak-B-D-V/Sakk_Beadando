@@ -4,21 +4,36 @@ class Lo{
 
     lepes(hely){
     let egy=[]
-    console.log("van")
+    if (typeof(this.lepes1(hely))!=="undefined"){
     egy.push(this.lepes1(hely))
-    egy.push(this.lepes2(hely))
-    egy.push(this.lepes3(hely))
-    egy.push(this.lepes4(hely))
-    egy.push(this.lepes5(hely))
-    egy.push(this.lepes6(hely))
-    egy.push(this.lepes7(hely))
-    egy.push(this.lepes8(hely))
+    }
+    if (typeof(this.lepes2(hely))!=="undefined"){
+        egy.push(this.lepes2(hely))
+    }
+    if (typeof(this.lepes3(hely))!=="undefined"){
+        egy.push(this.lepes3(hely))
+    }
+    if (typeof(this.lepes4(hely))!=="undefined"){
+        egy.push(this.lepes4(hely))
+    }
+    if (typeof(this.lepes5(hely))!=="undefined"){
+        egy.push(this.lepes5(hely))
+    }
+    if (typeof(this.lepes6(hely))!=="undefined"){
+        egy.push(this.lepes6(hely))
+    }
+    if (typeof(this.lepes7(hely))!=="undefined"){
+        egy.push(this.lepes7(hely))
+        }
+    if (typeof(this.lepes8(hely))!=="undefined"){
+        egy.push(this.lepes8(hely))
+        }
     return egy
+    
     }
     
     lepes1(index){
         let szam=index+2*8+1
-        console.log("van")
         if (this.lehet(szam,index)){
             return szam
         }
