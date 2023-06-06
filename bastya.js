@@ -36,7 +36,7 @@ class Bastya {
         let szamlalo=index
         while(this.Lepes_Lehetoseg(index,szamlalo)){
             szamok.push(szamlalo)
-            szamlalo=szamlalo+1
+            szamlalo=szamlalo-1
         }
         return szamok
     }
