@@ -36,13 +36,13 @@ class Kiraly{
             return szam
         }
     }
-    lepesek2(index){
+    Lepesek2(index){
         let szam=index+8
         if (this.lehet(szam,index+8)){
             return szam
         }
     }
-    lepesek3(index){
+    Lepesek3(index){
         let szam=index+9
         if (this.lehet(szam,index+8)){
             return szam
@@ -54,13 +54,13 @@ class Kiraly{
             return szam
         }
     }
-    lepesek5(index){
+    Lepesek5(index){
         let szam=index-1
         if (this.lehet(szam,index)){
             return szam
         }
     }
-    lepesek6(index){
+    Lepesek6(index){
         let szam=index-7
         if (this.lehet(szam,index-8)){
             return szam
@@ -72,7 +72,7 @@ class Kiraly{
             return szam
         }
     }
-    lepesek8(index){
+    Lepesek8(index){
         let szam=index-9
         if (this.lehet(szam,index-8)){
             return szam

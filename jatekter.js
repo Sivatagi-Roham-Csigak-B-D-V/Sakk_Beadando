@@ -1,6 +1,5 @@
 import Palya from "./palya.js";
 import InfoPanel from "./infoPanel.js";
-import Babu from "./babu.js";
 import Bastya from "./bastya.js";
 import Lo from "./lo.js";
 import Futo from "./futo.js";
