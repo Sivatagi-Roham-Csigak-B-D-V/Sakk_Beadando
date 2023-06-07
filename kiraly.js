@@ -92,8 +92,6 @@ class Kiraly{
         if (hatar1){
             let sor=this.#sorok(index/8)
             let hat=this.#sorok(szam/8)
-            console.log(sor)
-            console.log(hat)
             return sor==hat
         }
     }
