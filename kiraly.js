@@ -129,6 +129,7 @@ class Kiraly{
         }
         if (index>0){
             return 0
+            
         }
     }
 }
