@@ -3,7 +3,7 @@ import InfoPanel from "./infoPanel.js";
 import Bastya from "./bastya.js";
 import Lo from "./lo.js";
 import Futo from "./futo.js";
-import Kiralyno from "./Kiralyno.js";
+import Kiralyno from "./kiralyno.js";
 import Kiraly from "./kiraly.js";
 import Paraszt from "./paraszt.js";
 import { lista } from "./Babuklista.js";
