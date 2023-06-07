@@ -50,31 +50,34 @@ class Kiraly{
     }
     #Lepesek4(index){
         let szam=index+1
-        if (this.#lehet(szam,index)){
+        if (this.#lehet2(szam,index)){
             return szam
         }
     }
     #Lepesek5(index){
         let szam=index-1
-        if (this.#lehet(szam,index)){
+        if (this.#lehet2(szam,index)){
             return szam
         }
     }
     #Lepesek6(index){
         let szam=index-7
-        if (this.#lehet(szam,index-8)){
+        console.log(szam)
+        if (this.#lehet1(szam,index-8)){
             return szam
         }
     }
     #Lepesek7(index){
         let szam=index-8
-        if (this.#lehet(szam,index-8)){
+        console.log(szam)
+        if (this.#lehet1(szam,index-8)){
             return szam
         }
     }
     #Lepesek8(index){
         let szam=index-9
-        if (this.#lehet(szam,index-8)){
+        console.log(szam)
+        if (this.#lehet1(szam,index-8)){
             return szam
         }
     }
@@ -82,22 +85,24 @@ class Kiraly{
     #lehet(szam,index){
         let hatar2=szam<65
         if (hatar2){
-            let sor=this.#sorok(index+8)
-            let hat=this.#sorok(szam)
+            let sor=this.#sorok(index/8)
+            let hat=this.#sorok(szam/8)
             return sor==hat
         }
     }
     #lehet1(szam,index){
         let hatar1=szam>0
         if (hatar1){
-            let sor=this.#sorok(index-8)
-            let hat=this.#sorok(szam)
+            let sor=this.#sorok(index/8)
+            let hat=this.#sorok(szam/8)
+            console.log(sor)
+            console.log(hat)
             return sor==hat
         }
     }
     #lehet2(szam,index){
-            let sor=this.#sorok(index)
-            let hat=this.#sorok(szam)
+            let sor=this.#sorok(index/8)
+            let hat=this.#sorok(szam/8)
             return sor==hat
     }
     #sorok(index){
