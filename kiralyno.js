@@ -2,7 +2,7 @@ class Kiralyno{
     constructor(){
     }
 
-    lepes_tomb(index){
+    lepes(index){
         let tomb=[]
         tomb.push(this.#Lepesekbf(index))
         tomb.push(this.#Lepesekjf(index))
