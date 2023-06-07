@@ -62,21 +62,18 @@ class Kiraly{
     }
     #Lepesek6(index){
         let szam=index-7
-        console.log(szam)
         if (this.#lehet1(szam,index-8)){
             return szam
         }
     }
     #Lepesek7(index){
         let szam=index-8
-        console.log(szam)
         if (this.#lehet1(szam,index-8)){
             return szam
         }
     }
     #Lepesek8(index){
         let szam=index-9
-        console.log(szam)
         if (this.#lehet1(szam,index-8)){
             return szam
         }
@@ -129,7 +126,7 @@ class Kiraly{
         }
         if (index>0){
             return 0
-            
+
         }
     }
 }
