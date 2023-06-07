@@ -4,17 +4,17 @@ class Kiralyno{
 
     lepes_tomb(index){
         let tomb=[]
-        tomb.push(this.Lepesekbf(index))
-        tomb.push(this.Lepesekjf(index))
-        tomb.push(this.Lepesekjl(index))
-        tomb.push(this.Lepesekbl(index))
-        tomb.push(this.Lepesf(index))
-        tomb.push(this.Lepesj(index))
-        tomb.push(this.Lepesb(index))
-        tomb.push(this.Lepesl(index))
+        tomb.push(this.#Lepesekbf(index))
+        tomb.push(this.#Lepesekjf(index))
+        tomb.push(this.#Lepesekjl(index))
+        tomb.push(this.#Lepesekbl(index))
+        tomb.push(this.#Lepesf(index))
+        tomb.push(this.#Lepesj(index))
+        tomb.push(this.#Lepesb(index))
+        tomb.push(this.#Lepesl(index))
         return tomb
     }
-    Lepesf(index){
+    #Lepesf(index){
         let szamok=[]
         let szamlalo=index
         while (szamlalo<64) {
@@ -23,7 +23,7 @@ class Kiralyno{
         }
         return szamok
     }
-    Lepesj(index){
+    #Lepesj(index){
         let szamok=[]
         let szamlalo=index
         while (szamlalo>0) {
@@ -32,68 +32,68 @@ class Kiralyno{
         }
         return szamok
     }
-    Lepesb(index){
+    #Lepesb(index){
         let szamok=[]
         let szamlalo=index
-        while(this.Lepes_Lehetoseg(index,szamlalo)){
+        while(this.#Lepes_Lehetoseg(index,szamlalo)){
             szamok.push(szamlalo)
             szamlalo=szamlalo+1
          }
          return szamok
     }
-    Lepesl(index){
+    #Lepesl(index){
         let szamok=[]
         let szamlalo=index
-        while(szamlalo>-4 && this.Lepes_Lehetoseg(index,szamlalo)){
+        while(szamlalo>-4 && this.#Lepes_Lehetoseg(index,szamlalo)){
             szamok.push(szamlalo)
             szamlalo=szamlalo-1
         }
         return szamok
     }
     
-    Lepes_Lehetoseg(index,szamlalo){
-        let elso=this.hatar(index/8)
-        let masodik=this.hatar(szamlalo/8)
+    #Lepes_Lehetoseg(index,szamlalo){
+        let elso=this.#hatar(index/8)
+        let masodik=this.#hatar(szamlalo/8)
         return masodik==elso
     }
-    Lepesekjf(index){
+    #Lepesekjf(index){
         let szamok=[]
         let szam=index
-        while (this.hatar((szam+8)/8)==this.hatar((szam+9)/8) && szam+9<=64) {
+        while (this.#hatar((szam+8)/8)==this.#hatar((szam+9)/8) && szam+9<=64) {
             szam=szam+9
             szamok.push(szam)
         }
         return szamok
 
     }
-    Lepesekbf(index){
+    #Lepesekbf(index){
         let szam=index
         let szamok=[]
-        while (this.hatar((szam+8)/8)==this.hatar((szam+7)/8) && szam+7<64) {
+        while (this.#hatar((szam+8)/8)==this.#hatar((szam+7)/8) && szam+7<64) {
             szam=szam+7
             szamok.push(szam)
         }
         return szamok
     }
-    Lepesekjl(index){
+    #Lepesekjl(index){
         let szam=index
         let szamok=[]
-        while (this.hatar((szam-8)/8)==this.hatar((szam-9)/8) && szam-9>0) {
+        while (this.#hatar((szam-8)/8)==this.#hatar((szam-9)/8) && szam-9>0) {
             szam=szam-9
             szamok.push(szam)
         }
         return szamok
     }   
-    Lepesekbl(index){
+    #Lepesekbl(index){
         let szam=index
         let szamok=[]
-        while (this.hatar((szam-8)/8)==this.hatar((szam-7)/8) && szam-7>0) {
+        while (this.#hatar((szam-8)/8)==this.#hatar((szam-7)/8) && szam-7>0) {
             szam=szam-7
             szamok.push(szam)
         }
         return szamok
     }
-    hatar(index){
+    #hatar(index){
         if (index>8){
             return 8
         }

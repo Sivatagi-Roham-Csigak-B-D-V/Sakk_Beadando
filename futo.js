@@ -4,50 +4,50 @@ class Futo{
 
     lepes_tomb(index){
         let tomb=[]
-        tomb.push(this.Lepesekbf(index))
-        tomb.push(this.Lepesekjf(index))
-        tomb.push(this.Lepesekjl(index))
-        tomb.push(this.Lepesekbl(index))
+        tomb.push(this.#Lepesekbf(index))
+        tomb.push(this.#Lepesekjf(index))
+        tomb.push(this.#Lepesekjl(index))
+        tomb.push(this.#Lepesekbl(index))
         return tomb
     }
-    Lepesekjf(index){
+    #Lepesekjf(index){
         let szamok=[]
         let szam=index
-        while (this.hatarr((szam+8)/8)==this.hatarr((szam+9)/8) && szam+9<=64) {
+        while (this.#hatarr((szam+8)/8)==this.#hatarr((szam+9)/8) && szam+9<=64) {
             szam=szam+9
             szamok.push(szam)
         }
         return szamok
 
     }
-    Lepesekbf(index){
+    #Lepesekbf(index){
         let szam=index
         let szamok=[]
-        while (this.hatarr((szam+8)/8)==this.hatarr((szam+7)/8) && szam+7<64) {
+        while (this.#hatarr((szam+8)/8)==this.#hatarr((szam+7)/8) && szam+7<64) {
             szam=szam+7
             szamok.push(szam)
         }
         return szamok
     }
-    Lepesekjl(index){
+    #Lepesekjl(index){
         let szam=index
         let szamok=[]
-        while (this.hatarr((szam-8)/8)==this.hatarr((szam-9)/8) && szam-9>0) {
+        while (this.#hatarr((szam-8)/8)==this.#hatarr((szam-9)/8) && szam-9>0) {
             szam=szam-9
             szamok.push(szam)
         }
         return szamok
     }   
-    Lepesekbl(index){
+    #Lepesekbl(index){
         let szam=index
         let szamok=[]
-        while (this.hatarr((szam-8)/8)==this.hatarr((szam-7)/8) && szam-7>0) {
+        while (this.#hatarr((szam-8)/8)==this.#hatarr((szam-7)/8) && szam-7>0) {
             szam=szam-7
             szamok.push(szam)
         }
         return szamok
     }
-    hatarr(index){
+    #hatarr(index){
         if (index>7){
             return 8
         }
